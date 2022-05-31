@@ -20,7 +20,7 @@ let &t_ut=''
 " === Main code display
 " ===
 set number
-set relativenumber
+" set relativenumber
 set ruler
 " set cursorline
 syntax enable
