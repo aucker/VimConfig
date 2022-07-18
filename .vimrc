@@ -215,7 +215,7 @@ call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
 
 "A welcome interface
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
 
 "the directory of vim
 Plug 'scrooloose/nerdtree'
@@ -224,13 +224,13 @@ Plug 'kien/ctrlp.vim'
 
 "dress my vim
 Plug 'vim-airline/vim-airline'
-let g:airline_powerline_fonts=1
+Plug 'vim-airline/vim-airline-themes'
 
 "Linter
 " Plug 'w0rp/ale'
 
 "Utilities
-Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
 
 " Initialize plugin system
 call plug#end()
