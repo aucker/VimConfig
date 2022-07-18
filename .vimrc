@@ -174,31 +174,31 @@ map ` ~
 autocmd BufEnter * silent! lcd %:p:h
 
 " Compile function
-map r :call CompileRunGcc()<CR>
-func! CompileRunGcc()
-  exec "w"
-  if &filetype == 'c'
-    exec "!g++ % -o %<"
-    exec "!./%<"
-  elseif &filetype == 'cpp'
-    exec "!g++ % -o %<"
-    exec "!time ./%<"
-  elseif &filetype == 'java'
-    exec "!javac %"
-    exec "!time java %<"
-  elseif &filetype == 'sh'
-    :!time bash %
-  elseif &filetype == 'python'
-    silent! exec "!clear"
-    exec "!time python3 %"
-  elseif &filetype == 'html'
-    exec "!firefox % &"
-  elseif &filetype == 'markdown'
-    exec "MarkdownPreview"
-  elseif &filetype == 'vimwiki'
-    exec "MarkdownPreview"
-  endif
-endfunc
+" map r :call CompileRunGcc()<CR>
+" func! CompileRunGcc()
+"   exec "w"
+"   if &filetype == 'c'
+"     exec "!g++ % -o %<"
+"     exec "!./%<"
+"   elseif &filetype == 'cpp'
+"     exec "!g++ % -o %<"
+"     exec "!time ./%<"
+"   elseif &filetype == 'java'
+"     exec "!javac %"
+"     exec "!time java %<"
+"   elseif &filetype == 'sh'
+"     :!time bash %
+"   elseif &filetype == 'python'
+"     silent! exec "!clear"
+"     exec "!time python3 %"
+"   elseif &filetype == 'html'
+"     exec "!firefox % &"
+"   elseif &filetype == 'markdown'
+"     exec "MarkdownPreview"
+"   elseif &filetype == 'vimwiki'
+"     exec "MarkdownPreview"
+"   endif
+" endfunc
 
 "The plugs manager
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -224,9 +224,10 @@ Plug 'kien/ctrlp.vim'
 
 "dress my vim
 Plug 'vim-airline/vim-airline'
+let g:airline_powerline_fonts=1
 
 "Linter
-Plug 'w0rp/ale'
+" Plug 'w0rp/ale'
 
 "Utilities
 Plug 'jiangmiao/auto-pairs'
@@ -238,4 +239,4 @@ call plug#end()
 map nt :NERDTreeToggle<CR>
 
 " ale
-nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" nnoremap gd :YcmCompleter GoToDefinitionElseDeclaration<CR>
